@@ -2,13 +2,25 @@ body {
   background-color: black;
   color: white;
   font-size: 25px;
+  height: 100%;
+  overflow: hidden;
 }
 
-.dark-mode {
-  background-color: white;
+.light-mode {
+  background-color: rgb(128, 125, 125);
   color: black;
 }
 
+.light-mode .menu-item{
+  color: black;
+}
+
+.light-mode .menu-background-pattern{
+  background-image: radial-gradient(
+    rgba(0, 0, 0, 0.1) 9%, 
+    transparent 9%
+  );
+}
 
 #menu {  
   align-items: center;
@@ -75,7 +87,7 @@ body {
 }
 
 #menu-background-image {
-  background-image: url("https://images.unsplash.com/photo-1492496913980-501348b61469?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2574&q=80");
+  background-image: url("https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8amF2YXNjcmlwdHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80");
   background-position: center 40%;
   background-size: 110vmax;
   height: 100%;
@@ -118,8 +130,6 @@ body {
   text-decoration: none;
   transition: opacity 400ms ease;
 }
-
-/* -- YouTube Link Styles -- */
 
 body.menu-toggled > .meta-link > span {
   color: rgb(30, 30, 30);
@@ -171,9 +181,22 @@ body.menu-toggled > .meta-link > span {
   font-family: "Rubik", sans-serif;
 }
 
-#theme-toggle {
-  position: absolute;
+.theme-toggle {
+  position: fixed;
   top: 10px;
-  right: 10px;
+  left: 10px;
+  padding: 5px 10px;
+  font-size: 14px;
   z-index: 10000;
+}
+
+button[type="button"] {
+  background-color: #282828;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 10px;
+  margin-left: 5px;
 }
