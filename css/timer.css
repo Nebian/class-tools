@@ -650,7 +650,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #121212;
+  background: black;
   transform-style: preserve-3d;
   perspective: 1000px;
   color: white;
